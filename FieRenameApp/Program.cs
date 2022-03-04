@@ -17,11 +17,14 @@ namespace FieRenameApp
             foreach (var file in files)
             {
                 string fileName = Path.GetFileName(file);
-                File.Copy(file, $@"{destinationRenameFolder}\BELLDINI_{partOfFileName(0, FileName(file))}_{partOfFileName(2, FileName(file))}_{partOfFileName(3, FileName(file))}");
+                File.Copy(file, $@"{destinationRenameFolder}\BELLDINI_
+                                        {partOfFileName(0, FileName(file))}_
+                                        {partOfFileName(2, FileName(file))}_
+                                        {partOfFileName(3, FileName(file))}");
                 
             }
 
-            string FileName(string path)
+            string FileName(string path) 
             {
                 string fileNameClean = Path.GetFileName(path);
 
